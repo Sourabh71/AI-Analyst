@@ -1,5 +1,54 @@
 
 import streamlit as st
+def load_custom_css():
+    st.markdown("""
+        <style>
+            html, body, [class*="css"]  {
+                font-family: 'Inter', sans-serif;
+                background-color: #f9fafb;
+                color: #111827;
+            }
+
+            h1, h2, h3 {
+                font-weight: 700;
+                color: #1f2937;
+                margin-bottom: 0.5rem;
+            }
+
+            .stButton > button {
+                background-color: #3b82f6;
+                color: white;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+
+            .stButton > button:hover {
+                background-color: #2563eb;
+                transform: scale(1.03);
+            }
+
+            .stTextInput > div > input {
+                border: 2px solid #d1d5db;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .css-1aumxhk {
+                background-color: white;
+                border-radius: 1rem;
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .reportview-container .main footer {visibility: hidden;}
+        </style>
+    """, unsafe_allow_html=True)
+
+load_custom_css()
+
 import pdfplumber
 import requests
 import json
