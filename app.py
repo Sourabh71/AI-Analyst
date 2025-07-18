@@ -58,7 +58,7 @@ if uploaded_file:
     if st.button("Run LLM Extraction"):
         with st.spinner("Calling AI..."):
 
-            OPENROUTER_API_KEY = ""
+            OPENROUTER_API_KEY = st.secrets["API_KEY"]
 
             prompt = f"""
 Read the following financial press release or statement and extract the key financial values:
